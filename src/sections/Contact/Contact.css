@@ -1,0 +1,125 @@
+.contact {
+  font-family: oswald;
+  color: var(--white);
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Avn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100svh;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.Avn video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+}
+
+.contact h1 {
+  margin-top: 4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: yellow;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input,
+textarea {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #777;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button {
+  background-color: yellow;
+  color: #000;
+  border: none;
+  padding: 1rem;
+  font-size: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(255, 255, 45);
+}
+
+/* Existing styles remain above this */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-message {
+  background-color: #111;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  color: yellow;
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation: fadeInPopup 0.3s ease;
+}
+
+@keyframes fadeInPopup {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  form {
+    padding: 0 1rem;
+  }
+}
