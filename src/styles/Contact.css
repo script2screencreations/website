@@ -1,0 +1,162 @@
+.contact-form {
+  background: #1e293b;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #d1d5db;
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #334155;
+  border: 1px solid #475569;
+  border-radius: 0.5rem;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #f59e0b;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.5); /* amber-500 ring effect */
+}
+
+
+.form-textarea {
+  resize: none;
+}
+
+.submit-button {
+  width: 100%;
+  background: linear-gradient(to right, #f59e0b, #f97316);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.success-message {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.success-icon {
+  width: 4rem;
+  height: 4rem;
+  color: #10b981;
+  margin: 0 auto 1rem;
+}
+
+.success-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.success-text {
+  color: #9ca3af;
+}
+
+
+
+.contact-info-card:hover {
+  border-color: #f59e0b;
+}
+
+.contact-info-icon {
+  background: linear-gradient(to left, #f97316, #f97316);
+  border-radius: 50%;
+  padding: 5px;
+  transition: transform 0.3s ease;
+}
+
+.contact-info-card:hover .contact-info-icon {
+  transform: scale(1.1);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  background: #1e293b;
+  padding: 1rem;
+  border-radius: 50%;
+  color: #9ca3af;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: white;
+  background: #f59e0b;
+}
+
+.map-placeholder {
+  background: #1e293b;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.map-content {
+  height: 16rem;
+  background: linear-gradient(135deg, #334155, #475569);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-item {
+  background: #0f172a;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid #334155;
+}
+
+.faq-question {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.75rem;
+}
+
+.faq-answer {
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
