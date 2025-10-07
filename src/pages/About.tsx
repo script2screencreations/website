@@ -30,30 +30,15 @@ const About = () => {
 
   const timeline = [
     {
-      year: '2016',
-      title: 'The Beginning',
-      description: 'Started as a passion project by Alex Rodriguez, focusing on wedding photography in the local area.'
-    },
-    {
-      year: '2018',
-      title: 'Team Expansion',
-      description: 'Sarah Chen joined as our videographer, allowing us to offer comprehensive media services.'
-    },
-    {
-      year: '2020',
-      title: 'Studio Opening',
-      description: 'Opened our first professional studio space and expanded into corporate photography.'
-    },
-    {
-      year: '2022',
-      title: 'Award Recognition',
-      description: 'Received our first industry award for excellence in wedding photography.'
-    },
-    {
       year: '2024',
-      title: 'Leading the Industry',
-      description: 'Now recognized as one of the top media studios in the region with 500+ successful projects.'
-    }
+      title: 'The Beginning',
+      description: 'Started as a passion project by Priyadharshini, focusing on corporate events in the local area.'
+    },
+    {
+      year: '2025',
+      title: 'Got our first project',
+      description: 'We got our first client to cover a two day hackathon event.'
+    },
   ];
 
   return (

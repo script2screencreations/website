@@ -58,7 +58,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
+      details: ['+91 96779 01869'],
       action: 'tel:+15551234567'
     },
     {
@@ -70,7 +70,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Location',
-      details: ['KPR Institute of Engineering and Technology, Coimbatore'],
+      details: ['Incubation Center at KPR Institute of Engineering and Technology, Coimbatore'],
       action: ''
     },
     {
@@ -320,12 +320,14 @@ const Contact = () => {
                   <a href="https://www.instagram.com/s2s_creations_?igsh=MXJrbTcxeTZ3dXhyeA==" target="_blank" className="social-link">
                     <Instagram className="w-6 h-6" />
                   </a>
+                  {/* 
                   <a href="#" className="social-link">
                     <Facebook className="w-6 h-6" />
                   </a>
                   <a href="#" className="social-link">
                     <Linkedin className="w-6 h-6" />
                   </a>
+                  */}
                 </div>
               </div>
             </motion.div>

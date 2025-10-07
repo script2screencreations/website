@@ -5,10 +5,8 @@ import { Camera, Video, Award, Users, ArrowRight, Play, Star } from 'lucide-reac
 
 const Home = () => {
   const stats = [
-    { icon: Camera, label: 'Projects Completed', value: '500+' },
-    { icon: Users, label: 'Happy Clients', value: '200+' },
-    { icon: Award, label: 'Awards Won', value: '15+' },
-    { icon: Star, label: 'Years Experience', value: '8+' },
+    { icon: Camera, label: 'Projects Completed', value: '2+' },
+    { icon: Users, label: 'Happy Clients', value: '2+' },
   ];
 
   const services = [
