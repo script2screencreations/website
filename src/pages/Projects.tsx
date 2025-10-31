@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Camera, Video, ExternalLink, Heart } from 'lucide-react';
+import HackXelerate25 from "../Assets/projects/hackxelerate25.png";
 
 type ProjectType = 'photography' | 'videography' | 'Both';
 
@@ -33,7 +34,7 @@ const Projects = () => {
       category: 'event',
       type: 'Both',
       client: 'KPR IET',
-      image: "/src/Assets/projects/hackxelerate25.png",
+      image: HackXelerate25,
       description:
         "We were honored to be the official media partner of HackXelerate'25, contributing to its branding, promotion, and digital content. Our team handled pre-event posters, live coverage, and post-event highlights across various platforms.",
     },
