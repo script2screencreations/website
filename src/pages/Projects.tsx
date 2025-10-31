@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Camera, Video, ExternalLink, Heart } from 'lucide-react';
+import hackxelerate25 from "src/Assets/projects/HackXelerate25.jpg";
 
 type ProjectType = 'photography' | 'videography' | 'Both';
 
