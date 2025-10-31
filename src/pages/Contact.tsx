@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Instagram, Linkedin, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Instagram } from 'lucide-react';
 import { sendEmail } from '../utils/sendEmail';
 import '../styles/Contact.css';
 
@@ -59,7 +59,7 @@ const Contact = () => {
       icon: Phone,
       title: 'Phone',
       details: ['+91 96779 01869'],
-      action: 'tel:+15551234567'
+      action: 'tel:+919677901869'
     },
     {
       icon: Mail,
@@ -93,26 +93,24 @@ const Contact = () => {
 
   return (
     <div className="pt-16 min-h-screen bg-slate-900">
-      {/* Header */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
+      <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">Get In Touch</h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Get In Touch</h1>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Ready to bring your vision to life? Let's discuss your project and create something extraordinary together.
             </p>
           </motion.div>
         </div>
       </section>
 
-      <div className="py-20 bg-slate-900">
+      <div className="py-16 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
+          <div className="grid lg:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -120,7 +118,7 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <div className="contact-form">
-                <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
+                <h2 className="text-2xl font-bold text-white mb-4">Send Us a Message</h2>
 
                 {isSubmitted ? (
                   <motion.div className="success-message">
@@ -130,7 +128,7 @@ const Contact = () => {
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit}>
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 gap-4">
                       <div className="form-group">
                         <label htmlFor="name" className="form-label">
                           Full Name *
@@ -163,7 +161,7 @@ const Contact = () => {
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 gap-4">
                       <div className="form-group">
                         <label htmlFor="phone" className="form-label">
                           Phone Number *
@@ -176,7 +174,7 @@ const Contact = () => {
                           value={formData.phone}
                           onChange={handleChange}
                           className="form-input"
-                          placeholder="+1 (555) 123-4567"
+                          placeholder="+91 98765 43210"
                         />
                       </div>
                       <div className="form-group">
@@ -223,7 +221,7 @@ const Contact = () => {
                         id="message"
                         name="message"
                         required
-                        rows={5}
+                        rows={4}
                         value={formData.message}
                         onChange={handleChange}
                         className="form-textarea"
@@ -243,17 +241,15 @@ const Contact = () => {
                     </motion.button>
                   </form>
                 )}
-              </div>
 
-              {/* Moved 'Find Us on the Map' below the form */}
-              <div className="mt-12">
-                <h3 className="text-2xl font-semibold text-white mb-4">Find Us on the Map</h3>
+              <div className="mt-8">
+                <h3 className="text-xl font-semibold text-white mb-3">Find Us on the Map</h3>
                 <div className="rounded-xl overflow-hidden shadow-lg border border-slate-700">
                   <iframe
                     title="S2S Creations Studio Location"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.252896770092!2d77.14087969886405!3d11.077276898819298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8ff7a08d662bb%3A0x81c68f2ddd8c1dfa!2sKPR%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1757237111986!5m2!1sen!2sin"
                     width="100%"
-                    height="350"
+                    height="300"
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
@@ -261,19 +257,19 @@ const Contact = () => {
                   ></iframe>
                 </div>
               </div>
+              </div>
             </motion.div>
 
-            {/* Contact Info */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="space-y-8"
+              className="space-y-6"
             >
               <div>
-                <h2 className="text-3xl font-bold text-white mb-8">Contact Information</h2>
-                <div className="space-y-6">
+                <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
+                <div className="space-y-4">
                   {contactInfo.map((info, index) => (
                     <motion.div
                       key={info.title}
@@ -281,29 +277,26 @@ const Contact = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
-                      className="contact-info-card flex flex-col gap-4 bg-slate-800 p-6 rounded-xl border border-slate-700 hover:border-amber-400 transition-all duration-300 group"
+                      className="contact-info-card flex flex-col gap-3 bg-slate-800 p-4 rounded-xl border border-slate-700 hover:border-amber-400 transition-all duration-300 group"
                     >
-                      {/* Icon + Title */}
-                      <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-3">
                         <div className="contact-info-icon">
-                          <info.icon className="w-6 h-6 text-white" />
+                          <info.icon className="w-5 h-5 text-white" />
                         </div>
                         <h3 className="text-lg font-semibold text-white">{info.title}</h3>
                       </div>
-
-                      {/* Details */}
                       <div className="space-y-1">
                         {info.details.map((detail, idx) => (
                           <div key={idx}>
                             {info.action && idx === 0 ? (
                               <a
                                 href={info.action}
-                                className="text-gray-400 hover:text-amber-400 transition-colors"
+                                className="text-gray-400 hover:text-amber-400 transition-colors text-sm"
                               >
                                 {detail}
                               </a>
                             ) : (
-                              <p className="text-gray-400">{detail}</p>
+                              <p className="text-gray-400 text-sm">{detail}</p>
                             )}
                           </div>
                         ))}
@@ -313,21 +306,12 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Social Links */}
               <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Follow Us</h3>
+                <h3 className="text-xl font-bold text-white mb-4">Follow Us</h3>
                 <div className="social-links">
                   <a href="https://www.instagram.com/s2s_creations_?igsh=MXJrbTcxeTZ3dXhyeA==" target="_blank" className="social-link">
                     <Instagram className="w-6 h-6" />
                   </a>
-                  {/* 
-                  <a href="#" className="social-link">
-                    <Facebook className="w-6 h-6" />
-                  </a>
-                  <a href="#" className="social-link">
-                    <Linkedin className="w-6 h-6" />
-                  </a>
-                  */}
                 </div>
               </div>
             </motion.div>
@@ -335,23 +319,22 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* FAQ */}
-      <section className="py-20 bg-slate-800">
+      <section className="py-16 bg-slate-800">
         <div className="max-w-4xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-400">
+            <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+            <p className="text-lg text-gray-400">
               Quick answers to common questions about our services.
             </p>
           </motion.div>
 
-          <div className="space-y-6">
+          <div className="space-y-4">
             {[
               {
                 question: "How far in advance should I book your services?",

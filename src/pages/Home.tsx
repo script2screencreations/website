@@ -29,7 +29,6 @@ const Home = () => {
 
   return (
     <div className="pt-16">
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900"
@@ -47,54 +46,52 @@ const Home = () => {
           transition={{ duration: 1, delay: 0.2 }}
           className="relative z-10 text-center max-w-4xl mx-auto px-4"
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
             Capturing Life's
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500"> Precious Moments</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-300 mb-6 leading-relaxed">
             Professional photography and videography services that tell your story with passion and artistry.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
             <Link to="/projects">
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(245, 158, 11, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-amber-400 to-orange-500 text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center space-x-2 hover:shadow-xl transition-all duration-300"
+                className="bg-gradient-to-r from-amber-400 to-orange-500 text-white px-6 py-3 rounded-full font-semibold text-base flex items-center space-x-2 hover:shadow-xl transition-all duration-300"
               >
                 <span>View Our Work</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4" />
               </motion.button>
             </Link>
             
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center space-x-2 hover:bg-white hover:text-slate-900 transition-all duration-300"
+              className="border-2 border-white text-white px-6 py-3 rounded-full font-semibold text-base flex items-center space-x-2 hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
-              <Play className="w-5 h-5" />
+              <Play className="w-4 h-4" />
               <span>Watch Reel</span>
             </motion.button>
           </div>
         </motion.div>
 
-        {/* Floating elements */}
         <motion.div
           animate={{ y: [-20, 20, -20] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-20 left-10 w-16 h-16 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full opacity-20"
+          className="absolute top-20 left-10 w-12 h-12 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full opacity-20"
         />
         <motion.div
           animate={{ y: [20, -20, 20] }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-20 right-10 w-12 h-12 bg-gradient-to-r from-purple-400 to-blue-500 rounded-full opacity-20"
+          className="absolute bottom-20 right-10 w-10 h-10 bg-gradient-to-r from-purple-400 to-blue-500 rounded-full opacity-20"
         />
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-slate-800">
+      <section className="py-16 bg-slate-800">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -104,34 +101,33 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
+                <div className="w-14 h-14 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <stat.icon className="w-6 h-6 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-400">{stat.label}</div>
+                <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-gray-400 text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-slate-900">
+      <section className="py-16 bg-slate-900">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Services</h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Services</h2>
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
               From intimate moments to grand celebrations, we provide comprehensive media solutions tailored to your needs.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -142,20 +138,20 @@ const Home = () => {
                 whileHover={{ scale: 1.05 }}
                 className="group cursor-pointer"
               >
-                <div className="bg-slate-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+                <div className="bg-slate-800 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
                   <div className="relative overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                      className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent" />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-amber-400 transition-colors">
+                  <div className="p-5">
+                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-gray-400 leading-relaxed">{service.description}</p>
+                    <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -164,8 +160,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-amber-400 to-orange-500">
+      <section className="py-16 bg-gradient-to-r from-amber-400 to-orange-500">
         <div className="max-w-4xl mx-auto text-center px-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -173,17 +168,17 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Create Something Amazing?
             </h2>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-lg text-white/90 mb-6">
               Let's discuss your vision and bring it to life with our professional expertise.
             </p>
             <Link to="/contact">
               <motion.button
                 whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(0, 0, 0, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-slate-900 px-8 py-4 rounded-full font-bold text-lg hover:shadow-xl transition-all duration-300"
+                className="bg-white text-slate-900 px-6 py-3 rounded-full font-bold text-base hover:shadow-xl transition-all duration-300"
               >
                 Get In Touch
               </motion.button>
